@@ -17,7 +17,6 @@ namespace RPG_Semana2
             Damage = damage;
         }
 
-       
         public int ReceiveDamage(int damage)
         {
             Health -= damage;

@@ -117,7 +117,7 @@ namespace RPG_Semana2
                                 MeleeEnemy currentEnemy = (MeleeEnemy)enemy;
                                 Console.WriteLine($"Armadura del enemigo melee: {currentEnemy.GetArmor()}");
 
-                                int damageToPlayer = Math.Max(0, playerDamage - currentEnemy.GetArmor());
+                                int damageToPlayer = (playerDamage - currentEnemy.GetArmor());
                                 Console.WriteLine($"El enemigo melee ataca al jugador con {enemy.Damage} de daño.");
                                 player.ReceiveDamage(enemy.Damage);
                             }
@@ -128,7 +128,7 @@ namespace RPG_Semana2
 
                                 if (currentEnemy.HasBullets())
                                 {
-                                    int damageToPlayer = Math.Max(0, playerDamage);
+                                    int damageToPlayer = (playerDamage);
                                     Console.WriteLine($"El enemigo range ataca al jugador con {enemy.Damage} de daño.");
                                     player.ReceiveDamage(enemy.Damage);
 

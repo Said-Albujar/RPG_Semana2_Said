@@ -16,11 +16,7 @@ namespace RPG_Semana2
             this.armor = armor;
         }
 
-        public override void Attack()
-        {
-            Console.WriteLine("Ataque del enemigo melee");
-        }
-
+      
         public int GetArmor()
         {
             return armor;

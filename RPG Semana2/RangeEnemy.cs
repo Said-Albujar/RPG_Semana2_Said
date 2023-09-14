@@ -21,10 +21,7 @@ namespace RPG_Semana2
             return bullets > 0;
         }
 
-        public override void Attack()
-        {
-            Console.WriteLine("Ataque del enemigo de rango");
-        }
+       
 
         public int GetBullets()
         {

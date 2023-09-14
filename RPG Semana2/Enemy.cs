@@ -17,11 +17,7 @@ namespace RPG_Semana2
             Damage = damage;
         }
 
-        public virtual void Attack()
-        {
-            Console.WriteLine("Ataque del enemigo genérico");
-        }
-
+       
         public int ReceiveDamage(int damage)
         {
             Health -= damage;

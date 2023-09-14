@@ -18,12 +18,12 @@ namespace RPG_Semana2
 
             for (int i = 0; i < numMeleeEnemies; i++)
             {
-                enemies.Add(new MeleeEnemy(70, 10, 5)); // Vida, Daño, Armadura
+                enemies.Add(new MeleeEnemy(50, 10, 5)); // Vida, Daño, Armadura
             }
 
             for (int i = 0; i < numRangeEnemies; i++)
             {
-                enemies.Add(new RangeEnemy(60, 10, 5)); // Vida, Daño, Balas
+                enemies.Add(new RangeEnemy(40, 10, 5)); // Vida, Daño, Balas
             }
         }
 
@@ -119,7 +119,7 @@ namespace RPG_Semana2
 
                                 int damageToPlayer = Math.Max(0, playerDamage - currentEnemy.GetArmor());
                                 Console.WriteLine($"El enemigo melee ataca al jugador con {enemy.Damage} de daño.");
-                                player.ReceiveDamage(damageToPlayer);
+                                player.ReceiveDamage(enemy.Damage);
                             }
                             else if (enemy is RangeEnemy)
                             {
@@ -130,7 +130,7 @@ namespace RPG_Semana2
                                 {
                                     int damageToPlayer = Math.Max(0, playerDamage);
                                     Console.WriteLine($"El enemigo range ataca al jugador con {enemy.Damage} de daño.");
-                                    player.ReceiveDamage(damageToPlayer);
+                                    player.ReceiveDamage(enemy.Damage);
 
                                     if (!currentEnemy.IsAlive())
                                     {

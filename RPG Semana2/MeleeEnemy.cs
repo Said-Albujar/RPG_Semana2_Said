@@ -28,7 +28,7 @@ namespace RPG_Semana2
 
         public int ReceiveDamageFromPlayer(int playerDamage)
         {
-            int actualDamage = Math.Max(0, playerDamage - armor);
+            int actualDamage = (playerDamage - armor);
             Health -= actualDamage;
             return Health;
         }
